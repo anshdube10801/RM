@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Title -->
+    <title>POP-UP MODEL</title>
+    <!--External css-->
+   <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+     <!-- Button trigger modal -->
+     <div class="card" style="width: 10rem;">
+      <img src="./img/india-positive_1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+           <h5><a href="#" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">India Positive</a></h5>
+      </div>
+    </div>
+    <!--modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            
+            <h4 class="modal-title" id="exampleModalLabel">India Positive</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="description">
+               <p class="modal-text"> India Positive: New Essays and Selected Columns is an exciting new collection of non-fiction pieces by Chetan Bhagat,the best-selling Indian author.<br>
+                   In this book, published by Westland Publishing in 2019, Bhagat discusses issues relating to India's recent political, economic and social past, and its potential future.</p>
+          </div>
+          
+          <div class="modal-body">
+            
+              <textarea name="explanation" id="output" cols="60" rows="5" placeholder="Type your reason here..." required> </textarea>
+              <center>
+                <button class="btn btn-secondary" value="clear"  id="clear">Clear</button>
+                <button type="button" class="btn btn-primary" onclick="set_cookie()">Confirm </button>
+              </center>
+              
+          </div>
+          <script>
+            function set_cookie() {
+              var x = document.getElementById('output').value;
+              document.cookie = 'reason=' + x;
+              location.replace("dummy.php");
+            }
+          </script>
+
+        </div>  
+      </div>
+    </div>
+    <script src="js/index.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     
+  </body>
+</html>

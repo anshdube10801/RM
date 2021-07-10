@@ -1,0 +1,151 @@
+
+
+
+.form-container{
+    width: 65%;
+    margin:auto;
+    margin-top: 20px;
+    border: solid 1px orangered;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container:hover{
+    box-shadow: 5px 10px 20px 20px #888888;
+}
+
+.include-details-div,.additional-info-div,.set-price-div,.review-details-div{
+    width: 60%;
+    /* text-align: left; */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.include-details-header,.additional-info-header,.set-price-header,.review-details-header{
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+    
+}
+
+.ad-title-div,.book-title-div,.author-name-div,.ISBN-number-div,.date-of-purchase-div,.book-condition-div
+,.price-div,.book-quantity-div,.review-email-div,.contact-no-div,.zip-code-div{
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    text-align: left;
+}
+
+.ad-title-label,.ad-title-input,.book-title-label,.book-title-input,.author-name-label,.author-name-input,
+.ISBN-number-label,.ISBN-number-input,.date-of-purchase-label,.date-of-purchase-input,.book-condition-label,
+.book-condition-input,.price-label,.book-quantity-label,.book-quantity-input,.review-email-label,.review-email-input
+,.contact-no-label,.contact-no-input,.zip-code-label,.zip-code-input{
+    display: block;
+}
+
+.ad-title-input,.book-title-input,.author-name-input,.ISBN-number-input,.date-of-purchase-input,.book-condition-input
+,.price-input,.book-quantity-input,.review-email-input,.contact-no-input,.zip-code-input{
+    width: 95%;
+    height: 40px;
+    border: solid 1px;
+    border-radius:3px;
+}
+
+.ad-title-input:hover,.book-title-input:hover,.author-name-input:hover,.ISBN-number-input:hover,.date-of-purchase-input:hover,.book-condition-input:hover,.price-input:hover,.book-quantity-input:hover,.review-email-input:hover,.contact-no-input:hover,.zip-code-input:hover{
+ border: 1px solid orangered;
+}
+
+.ad-title-warning,.ad-title-limit,.book-title-warning,.book-title-limit,.author-name-warning,.author-name-limit
+,.ISBN-number-warning,.ISBN-number-limit,.date-of-purchase-warning,.date-of-purchase-limit,.book-condition-warning
+,.book-condition-limit,.review-email-warning,.review-email-limit,.contact-no-warning,.contact-no-limit,.zip-code-warning
+,.zip-code-limit{
+    font-size: 13px;
+}
+
+.ad-title-warning{
+    padding-right: 70px;
+}
+
+
+
+.book-title-warning{
+    padding-right: 140px;
+}
+
+.book-title-limit{
+    padding-left: 143px;
+}
+
+.author-name-warning{
+    padding-right: 138px;
+}
+
+.author-name-limit{
+    padding-left: 138px;
+}
+
+.ISBN-number-warning{
+    padding-right: 135px;
+}
+
+.ISBN-number-limit{
+    padding-left: 97px;
+}
+
+/* .book-title-div,.author-name-div,.ISBN-number-div,..date-of-purchase-div,.book-condition-div
+,.price-div,.book-quantity-div,.review-email-div,.contact-no-div,.zip-code-div{
+    margin-top: 70px;
+} */
+
+.date-of-purchase-warning{
+   padding-right: 70px;
+}
+
+.book-condition-warning{
+    padding-right: 160px;
+}
+
+.review-email-warning{
+    padding-right: 80px;
+}
+
+.contact-no-warning{
+    padding-right: 80px;
+}
+
+.contact-no-limit{
+    padding-left: 210px;
+}
+
+.zip-code-warning{
+    padding-right: 160px;
+}
+
+
+.sell-post-button{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+
+.sell-post-button:hover{
+    background-color: orangered;
+}
+
+.change-category-link{
+    margin-left:10px;
+    font-weight:bold ;
+    color: black;
+}
+
+
+.change-category-link:hover{
+    
+    text-decoration: none;
+    color: orangered;
+}
+

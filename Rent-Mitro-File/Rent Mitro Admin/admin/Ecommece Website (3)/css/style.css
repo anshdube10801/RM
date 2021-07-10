@@ -1,0 +1,21 @@
+body{
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+ }
+ .card{
+     margin: 5rem;
+ }
+ .button {
+     margin: 0px;
+     padding: 0px;
+     position:relative;
+     text-decoration: none; 
+     color: black; 
+     -ms-transform: translateY(-50%);
+     transform: translateY(-50%);  
+ }
+p{ 
+    margin: 1rem;
+      font-size: 15px;  
+}  

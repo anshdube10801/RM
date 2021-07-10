@@ -1,0 +1,9 @@
+body{
+    background: linear-gradient(to right,rgba(23, 241, 248, 0.459),#fffdfd9a, #f707af4b);
+}
+.heading
+{
+    font-style: oblique;
+    font-weight: bolder;
+    text-align: center;
+}

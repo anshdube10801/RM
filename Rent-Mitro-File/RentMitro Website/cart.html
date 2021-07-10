@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+
+<link rel="stylesheet" type="text/css" href="assets\CSS\stylecart.css">
+<link rel="stylesheet" type="text/css" href="assets\CSS\stylecart1.css">
+<title>MyCart</title>
+</head>
+<body class="bg-light">
+
+  <!--Header Start-->
+  <div class="header-div">
+      <div class="row" id="top"style="padding-left:0px;padding-right:0px;margin-right:0px;margin-left:0px;">
+          <div class="col-lg-3" style="padding-right:0px;margin-top: 0px;">
+           <a href="index.html"><img src="assets\img\rmlogotranparent.png" class="logo" ></a>
+          </div>
+          <div class="col-lg-6 d-lg-flex justify-content-lg-center align-items-lg-center" style="padding-right:0px;width:47%;">
+            <div class="input-container">
+              <input type="text" class="input-field" placeholder="Search by title, author or ISBN here..."/>
+              <button class="input-button"><i class="fa fas fa-search"></i></button>
+          </div>
+
+
+          </div>
+          <div class="col-lg-3 d-lg-flex justify-content-lg-center align-items-lg-center" style="padding-right:0px;">
+
+              <a href="account.html"><button type="button" class="btn-account"><i class="fa fas fa-user-circle user-icon" ;></i>Account</button></a>
+              <a href="cart.html" style="text-align: center;"><button type="button" class="btn-login"><i class="fa fas fa-shopping-cart user-cart"></i>Cart</button></a>
+              <a href="ad.html"><button type="button" class="btn-sell"><i class="fa fas fa-plus"></i></i>Sell</button></a>
+          </div>
+      </div>
+  </div>
+  <!--Header End-->
+  <!--Dropdown Bar Start-->
+  <div class="d-lg-flex justify-content-lg-center align-items-xl-center dropdown-bar">
+      <div class="dropdown" >
+          <a href="index.html" class="btn btn-primary dropdown-toggle" style="color: white; margin-left: 35px;"  >Home</a>
+
+      </div>
+      <div class="dropdown" >
+          <a href="multipleSellingPage.html" class="btn btn-primary dropdown-toggle" style="color: white; margin-left: 30px;"   aria-expanded="false" type="button">All Product</a>
+
+      </div>
+      <div class="dropdown" >
+          <a href="blog.html" class="btn btn-primary dropdown-toggle" style="color: white; margin-left: 47px; ;"  aria-expanded="false"  type="button">Blog</a>
+
+      </div>
+      <div class="dropdown" >
+          <a href="contact-us.html" class="btn btn-primary dropdown-toggle" style="color: white;" aria-expanded="false" type="button">Contact Us</a>
+
+      </div>
+      <div class="dropdown" >
+          <a href="aboutus.html" class="btn btn-primary dropdown-toggle" style="color: white;" aria-expanded="false"  type="button">About Us</a>
+
+      </div>
+  </div>
+  <!--Dropdown Bar End-->
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-10 col-11 mx-auto">
+<div class="row mt-5 gx-3">
+<!-- left side div -->
+<div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+<div class="card p-4">
+<h2 class="py-4 font-weight-bold">Cart (2 items)</h2>
+<div class="row">
+<!-- cart images div -->
+<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+<img src="assets\img\cartbook.jpg" class="img-fluid" alt="cart img">
+</div>
+
+
+
+
+<!-- cart product details -->
+<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+<div class="row">
+<!-- product name  -->
+<div class="col-6 card-title">
+<h1 class="mb-4 product_name">Harry potter</h1>
+<p class="mb-2">Signed copy </p>
+<p class="mb-2">Condition : Exellent</p>
+<p class="mb-3">Seller : Ram</p>
+</div>
+<!-- quantity inc dec -->
+<div class="col-6">
+<ul class="pagination justify-content-end set_quantity">
+<li class="page-item">
+<button class="page-link " onclick="decreaseNumber('textbox','itemval')">
+<i class="fas fa-minus"></i> </button>
+</li>
+<li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox" >
+</li>
+<li class="page-item">
+<button class="page-link" onclick="increaseNumber('textbox','itemval')"> <i class="fas fa-plus"></i></button>
+</li>
+</ul>
+</div>
+</div>
+<!-- //remover move and price -->
+<div class="row">
+<div class="col-8 d-flex justify-content-between remove_wish">
+<p><i class="fas fa-trash-alt"></i><a href="#"> REMOVE ITEM</a></p>
+</div>
+<div class="col-4 d-flex justify-content-end price_money">
+<h3>₹<span id="itemval">0.00 </span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+<!-- 2nd cart product -->
+<div class="card p-4">
+<div class="row">
+<!-- cart images div -->
+<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+<img src="assets\img\cartbook1.jpg" class="img-fluid" alt="cart img">
+</div>
+
+
+
+
+<!-- cart product details -->
+<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+<div class="row">
+<!-- product name  -->
+<div class="col-6 card-title">
+<h1 class="mb-4 product_name">Perks of being a wallflower</h1>
+<p class="mb-2">condition : moderate</p>
+<p class="mb-2">Seller : Raju</p>
+
+</div>
+<!-- quantity inc dec -->
+<div class="col-6">
+<ul class="pagination justify-content-end set_quantity">
+<li class="page-item">
+<button class="page-link " onclick="decreaseNumber('textbox1','itemval1')"> <i class="fas fa-minus"></i> </button>
+</li>
+<li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox1" >
+</li>
+<li class="page-item">
+<button class="page-link" onclick="increaseNumber('textbox1','itemval1')"> <i class="fas fa-plus"></i></button>
+</li>
+</ul>
+</div>
+</div>
+<!-- //remover move and price -->
+<div class="row">
+<div class="col-8 d-flex justify-content-between remove_wish">
+<p><i class="fas fa-trash-alt"></i><a href="#"> REMOVE ITEM</a></p>
+</div>
+<div class="col-4 d-flex justify-content-end price_money">
+<h3>₹<span id="itemval1">0.00 </span> </h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- right side div -->
+<div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+<div class="right_side p-3 shadow bg-white">
+<h2 class="product_name mb-5">The Total Amount Of</h2>
+<div class="price_indiv d-flex justify-content-between">
+<p>Product amount</p>
+<p>₹<span id="product_total_amt">0.00</span></p>
+</div>
+<div class="price_indiv d-flex justify-content-between">
+<p>Shipping Charge</p>
+<p>₹<span id="shipping_charge">50.0</span></p>
+</div>
+<hr />
+<div class="total-amt d-flex justify-content-between font-weight-bold">
+<p>The total amount of (including VAT)</p>
+<p>₹<span id="total_cart_amt">0.00</span></p>
+</div>
+<button id="Checkout" class="btn btn-primary text-uppercase" style="background-color:#FF4500; border-style: none;">Checkout</button>
+</div>
+
+<div class="mt-3 shadow p-3 bg-white">
+<div class="pt-4">
+<h5 class="mb-4">Expected delivery date</h5>
+<p>June 3rd 2021 - June 7th 2021</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- footer-div-->
+<div class="footer-div" style="margin-right:0px;margin-top: 100px; margin-left:  -200px;">
+<div class="row footer-row" >
+  <div class="col-3 footer-col footer-col-1" style="margin-right:0px;margin-top: 10px;">
+    <h4 class="footer-headings footer-headings-1">Get to know us</h4>
+    <ul class="footer-list">
+      <li class="footer-li-1"><a href="#" class="footer-link footer-link-1">About Us</a></li>
+      <li class="footer-li-1"><a href="#" class="footer-link footer-link-2">Careers</a></li>
+      <li class="footer-li-1"><a href="blog.html" class="footer-link footer-link-3">Blog</a></li>
+      <li class="footer-li-1"><a href="contact-us.html" class="footer-link footer-link-4">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="col-3 footer-col footer-col-2" style="margin-right:0px;margin-top: 10px; margin-left:  140px; " >
+    <h4 class="footer-headings footer-headings-2">Connect with us</h4>
+    <ul class="footer-list">
+      <li class="footer-li-2"><a href="#" class="footer-link footer-link-1">Twitter</a></li>
+      <li class="footer-li-2"> <a href="#" class="footer-link footer-link-2">Facebook</a></li>
+      <li class="footer-li-2"><a href="#" class="footer-link footer-link-3">Instagram</a></li>
+    </ul>
+
+  </div>
+  <div class="col-3 footer-col footer-col-3" style="margin-right:0px;margin-top: 10px;  margin-left:  90px;" >
+    <h4 class="footer-headings footer-headings-3">Help</h4>
+    <ul class="footer-list">
+      <li class="footer-li"><a href="#" class="footer-link footer-link-1">Payment</a></li>
+      <li class="footer-li"> <a href="#" class="footer-link footer-link-2">Shipping</a></li>
+      <li class="footer-li"><a href="#" class="footer-link footer-link-3">Return</a></li>
+        <li class="footer-li"><a href="#" class="footer-link footer-link-4">FAQ</a></li>
+    </ul>
+
+  </div>
+  <div class="col-3 footer-col footer-col-4" style="margin-right:0px;margin-top: 10px; margin-left:  110px; " >
+    <h4 class="footer-headings footer-headings-4">Policies</h4>
+    <ul class="footer-list">
+      <li class="footer-li"><a href="#" class="footer-link footer-link-1">Privacy Policy</a></li>
+      <li class="footer-li"> <a href="#" class="footer-link footer-link-2">Terms Of Use</a></li>
+      <li class="footer-li"><a href="#" class="footer-link footer-link-3">Secure Shopping</a></li>
+        <li class="footer-li"><a href="#" class="footer-link footer-link-4">Copyright Policy</a></li>
+    </ul>
+  </div>
+
+</div>
+</div>
+<!-- footer-div-end-->
+
+
+
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+var product_total_amt = document.getElementById('product_total_amt');
+var shipping_charge = document.getElementById('shipping_charge');
+var total_cart_amt = document.getElementById('total_cart_amt');
+var discountCode = document.getElementById('discount_code1');
+const decreaseNumber = (incdec, itemprice) => {
+var itemval = document.getElementById(incdec);
+var itemprice = document.getElementById(itemprice);
+console.log( itemprice.innerHTML);
+// console.log(itemval.value);
+if(itemval.value <= 0){
+itemval.value = 0;
+alert('Negative quantity not allowed');
+}else{
+itemval.value = parseInt(itemval.value) - 1;
+itemval.style.background = '#fff';
+itemval.style.color = '#000';
+itemprice.innerHTML  = parseInt(itemprice.innerHTML) - 550;
+product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) - 550;
+total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+}
+}
+const increaseNumber = (incdec, itemprice) => {
+var itemval = document.getElementById(incdec);
+var itemprice = document.getElementById(itemprice);
+// console.log(itemval.value);
+if(itemval.value >= 10){
+itemval.value = 10;
+alert('max 10 allowed');
+itemval.style.background = 'red';
+itemval.style.color = '#fff';
+}else{
+itemval.value = parseInt(itemval.value) + 1;
+itemprice.innerHTML  = parseInt(itemprice.innerHTML ) + 550;
+product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + 550;
+total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+}
+}
+
+const  discount_code = () => {
+let totalamtcurr = parseInt(total_cart_amt.innerHTML);
+let error_trw = document.getElementById('error_trw');
+if(discountCode.value === 'rent mitro'){
+let newtotalamt = totalamtcurr - 550;
+total_cart_amt.innerHTML = newtotalamt;
+error_trw.innerHTML = "Hurray! code is valid";
+}else{
+error_trw.innerHTML = "Try Again! Valid code is thapa";
+}
+}
+</script>
+</body>
+</html>

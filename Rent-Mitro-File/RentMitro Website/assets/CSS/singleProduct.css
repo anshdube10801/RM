@@ -1,0 +1,88 @@
+.singleProduct
+{
+    display: grid;
+    width:99vw;
+    height:900px;
+    grid-template-columns: " 1fr 1fr";
+    grid-template-rows: "1fr";
+
+    grid-template-areas: "productImage productDetail";
+}
+.productImage
+{
+  grid-area: productImage;
+  padding:20px 100px;
+  width: 600px; 
+}
+.smallimg:hover{
+  transform: translateY(-6px);
+}
+.mainImage:hover{
+  box-shadow: 5px 10px 20px;
+}
+.collapsed:hover{
+  box-shadow: 5px 10px 20px;
+}
+.productDetail
+{
+    width: 700px;
+ grid-area: productDetail;
+ text-align: left;
+}
+
+.productTitle
+{
+    font-size: 40px;
+    
+}
+.checked {
+  color: orange;
+}
+#rent
+{
+    display: none;
+}
+.btnTgl
+{
+    background-color: white;
+    border:1px solid orangered;
+    color: orangered;
+}
+.btnTgl:hover
+{
+    background-color: orangered;
+    color: white;
+}
+.price
+{
+    font-size: 30px;
+    color: red;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+.stock
+{
+    color: green;
+}
+.offer
+{
+    font-size: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(255, 68, 0, 0.493);
+}
+.bBtn
+{
+  background-color: white;
+    border:1px solid orangered;
+    color: orangered;  
+}
+.bBtn:hover{
+     background-color: orangered;
+    color: white;
+}

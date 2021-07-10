@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+   <title>Text Editor</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+         font-family: sans-serif;
+
+      }
+
+      .content {
+         box-sizing: border-box;
+         margin: 0 auto;
+         max-width: 680px;
+         padding: 20px;
+      }
+
+      #html-output {
+         white-space: pre-wrap;
+      }
+
+      #editor {
+         width: 40em;
+         font-family: sans-serif;
+      }
+
+      #source-editor {
+         display: none;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="content">
+      <form action="/Rent-Mitro-File/Rent Mitro Admin/admin/blog.php" method="POST" enctype="multipart/form-data">
+         <h1>Blog</h1>
+         <input name="art_id" type="hidden">
+         <table width="90%">
+            <tr>
+               <td>Title</td>
+               <td><input class="btn btn-block btn-10p24" name="title" type="text" placeholder="" style=" color: rgb(9, 41, 128); border: none;
+  border-bottom: 2px solid red;"></td>
+            </tr>
+         </table>
+         <div id="visual-editor">
+            <p><b>Editor<b>
+                     <div id="editor" class="pell">
+
+                        <button type="button" data-toggle="modal" data-target="#exampleModalLong">
+                           <i class="fa fa-camera"></i>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                           aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Select File</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                    </button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <input type="file" id="myFileInput" name="file"/>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+         </div>
+
+         <div id="source-editor">
+            <p><b>Source Editor<b>
+                     <p>
+                        <textarea id="html-output" name="html-output" onchange="TextArea()" onblur="TextArea()"
+                           rows="20" cols="88"
+                           style="resize:none;font-family: sans-serif;"><b>Write Your Blog</b></textarea>
+         </div>
+         <button type="submit" class="btn btn-green btn-10p24 btn-block"
+            name="submit" style="float:right; border-radius:5px;">PUBLISH</button>
+      </form>
+   </div>
+   <script src="pell.min.js"></script>
+   <script>
+      document.querySelector("#myFileInput").addEventListener("change", function () {
+         const reader = new FileReader();
+
+         reader.addEventListener("load", () => {
+
+            localStorage.setItem("recent-image", reader.result);
+            let content = document.querySelector('.pell-content');
+            let a = document.createElement('br');
+            let element = document.createElement('img');
+            element.className = "image";
+
+            element.src = localStorage.getItem("recent-image");
+            content.appendChild(a);
+            content.appendChild(element);
+            content.appendChild(a);
+            reader.result = null;
+         })
+
+         reader.readAsDataURL(this.files[0]);
+
+      });
+
+
+
+
+      var editor = window.pell.init({
+         element: document.getElementById('editor'),
+         actions: ['bold', 'italic', 'underline', 'heading1', 'heading2', 'olist', 'ulist', 'link', 'justifyLeft', 'justifyRight', 'justifyCenter', 'justifyFull'],
+         defaultParagraphSeparator: 'p',
+         onChange: function (html) {
+            document.getElementById('html-output').value = html
+         }
+      })
+      editor.content.innerHTML = document.getElementById('html-output').value
+      function TextArea() {
+         editor.content.innerHTML = document.getElementById('html-output').value
+      } function toggleEditor() {
+         if (document.getElementById("source-editor").style.display == "none") {
+            document.getElementById("source-editor").style.display = "block";
+            document.getElementById("visual-editor").style.display = "none";
+            document.getElementById("btn_lbl").value = "Visual Editor";
+         } else {
+            document.getElementById("source-editor").style.display = "none";
+            document.getElementById("visual-editor").style.display = "block";
+            document.getElementById("btn_lbl").value = "Source Editor";
+         }
+      }
+   </script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>

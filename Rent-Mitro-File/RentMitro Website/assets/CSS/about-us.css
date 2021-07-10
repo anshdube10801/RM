@@ -1,0 +1,154 @@
+a:hover{text-decoration: none;}
+html,body{overflow-x: hidden;overflow-y: auto;}
+
+
+
+/*middle*/
+.header{text-transform: capitalize;font-size:40px;}
+@media screen and (max-width:991px){
+    .card-3{display:none}
+}
+.header-part{height:400px;width:80%;border-radius:20px;  margin-top : -50px;}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'poppins' , sans-serif;
+
+
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+   background-repeat:no-repeat;
+   background-size:cover;
+  min-height: 100vh;
+  background: url('Abract01.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+
+
+
+
+}
+.header1{
+color : black;
+font-size : 20px;
+}
+section{
+
+
+  position: relative;
+
+}
+.container{
+
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.container .card{
+
+
+  position: relative;
+  width: 300px;
+  height: 400px;
+    background: linear-gradient(to right ,#CBC3E3,#ADD8E6);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+ transition: transform 0.5s;
+}
+.container .card:hover{
+transform: translateY(-10px);
+}
+.container .card .content{
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.container .card:hover .content{
+
+  opacity: 5;
+}
+.container .card .content .image{
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.container .card .content .image img{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.container .card .content .contentbox h3{
+
+color: black;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 500;
+font-size: 18px;
+text-align: center;
+margin: 20px 0 10px;
+line-height: 1.1em;
+}
+.container .card .content .contentbox h3 span{
+color:black;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.container .card .sci{
+color : black;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+.container .card .sci li{
+  list-style: none;
+  margin: 0 10px -90px;
+  transform: translate(37px);
+  transition: 0.5s;
+}
+.container .card .sci li a{
+  color: black;
+  font-size: 20px;
+  margin: 30px 60px 60px 3px;
+  margin-bottom: 30px;
+}
+
+
+/*middle*/
+.header{text-transform: capitalize;font-size:40px;}
+@media screen and (max-width:991px){
+    .card-3{display:none}
+}
+.header-part{height:400px;width:100%;border-radius:20px;}
+/*middle*/
