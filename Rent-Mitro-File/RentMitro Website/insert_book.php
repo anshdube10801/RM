@@ -1,6 +1,6 @@
 <?php
 
-    $conn = mysqli_connect("localhost","root","christina@@","rentmitro");
+    $conn = mysqli_connect("localhost","root","","rentmitro");
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         exit();

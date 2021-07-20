@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost","root","christina@@","rentmitro") or die(mysqli_error($con));
+    $conn = mysqli_connect("localhost","root","","rentmitro") or die(mysqli_error($con));
     session_start();
     
     if(isset($_POST["email"]) && isset($_POST["password"])) {
