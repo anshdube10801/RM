@@ -1,6 +1,6 @@
 <?php
 
-    $conn = mysqli_connect("localhost","root","christina@@","rentmitro") or die(mysqli_error($con));
+    $conn = mysqli_connect("localhost","root","","rentmitro") or die(mysqli_error($con));
     session_start();
 
     $query = "SELECT * from blog;";
